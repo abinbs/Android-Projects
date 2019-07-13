@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_headname1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WellCared\n You are cared!"
+        android:textSize="20sp"
+        android:textColor="#375899"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+    <TextView
+        android:id="@+id/tv_headname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Maid Service"
+        android:textSize="20sp"
+        android:textColor="#375899"
+        android:gravity="left"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your prefferd gender"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/rb_consult_both"
+            android:orientation="horizontal"
+            >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            />
+        <RadioButton
+            android:id="@+id/rb_consult_both"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Both"/>
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preferred Age Group"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/rb_consult_nodemand"
+            android:orientation="horizontal">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30-45"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45-55"
+            />
+        <RadioButton
+            android:id="@+id/rb_consult_nodemand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No demand"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time of work"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/rb_consult_notdecided"
+            android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fixed Hours"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Time"
+            />
+        <RadioButton
+            android:id="@+id/rb_consult_notdecided"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Decided"/>
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/bt_consult_find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#5bcc3b"
+            android:gravity="center"
+            android:text="Find for me"
+            android:clickable="true"
+            android:onClick="onButton8Click"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Humblest Tasks get Beautified"
+            android:textSize="30dp"
+
+            android:textColor="#375899"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We use the services of our partner  ABC Home Services. "
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+</LinearLayout>

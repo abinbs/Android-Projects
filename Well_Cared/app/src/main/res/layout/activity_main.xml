@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:src="@drawable/background" />
+    <TextView
+        android:id="@+id/tv_headname1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WellCared"
+        android:textSize="20sp"
+        android:textColor="#375899"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="4dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_headname2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You are cared!"
+        android:textSize="14sp"
+        android:textColor="#375899"
+        android:gravity="center"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:paddingTop="40dp">
+
+        <Button
+            android:id="@+id/bt_consult"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#5bcc3b"
+            android:onClick="onButton1Click"
+            android:text="Maid service"
+            android:layout_marginRight="16dp"
+            android:clickable="true"/>
+        <Button
+            android:id="@+id/bt_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#5bcc3b"
+            android:onClick="onButton2Click"
+            android:text="Medicine"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:padding="24dp"
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        android:paddingTop="40dp">
+
+        <Button
+            android:id="@+id/bt_grocery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#5bcc3b"
+            android:onClick="onButton3Click"
+            android:text="Groceries"
+            android:layout_marginRight="16dp"
+            android:clickable="true"/>
+        <Button
+            android:id="@+id/bt_tour"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#5bcc3b"
+            android:onClick="onButton4Click"
+            android:text="Take a tour"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You are not getting old\n You are getting better!"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:textSize="18dp"
+        android:textColor="#375899"
+        />
+
+
+
+</LinearLayout>
