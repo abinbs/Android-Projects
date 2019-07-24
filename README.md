@@ -1,10 +1,10 @@
 # Apps
 
-My first try in app development.<br/>
-<h3>MyApp:<br/></h3> A simple Calculator with basic arithmetic features.<br/>
-<h3> Networkingsample:<br/></h3>
+My first try in app development(using Android Studio).<br/>
+<h3>1. MyApp:<br/></h3> A simple Calculator with basic arithmetic features.<br/>
+<h3>2. Networkingsample:<br/></h3>
   A simple HTML Viewer.<br/>
-<h3> Well_Cared:<br/></h3> An app for the Elderly.An app that provides four services to the elderly namely<br/>
+<h3>3. Well_Cared:<br/></h3> An app for the Elderly.An app that provides four services to the elderly namely<br/>
 <ol>
   <li><h6> Maid Search:</h6></li>
     Finding a trustworthy maid is now an easy task just by searching in this app.<br/>
