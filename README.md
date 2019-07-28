@@ -15,4 +15,6 @@ All they have to do is to take a picture of the prescription and we would connec
   <li><h6> Take a tour:</h6></li>
     Our expeienced guides would take them for a trip to their dream destination and would caretake them.<br/>
 </ol>
+<h3>4. WordGame:</h3></br>
+A simple Word Game for kids about naming the various animals.</br>
 
