@@ -2,6 +2,7 @@ package com.example.wordgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -82,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(presCount < maxPresCount){
-                    if(presCount == 0){
+                    if(presCount == 0)
                         editText.setText("");
 
                         editText.setText(editText.getText().toString()+text);
@@ -94,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                             doValidate();
                         }
 
-                    }
+
                 }
             }
         });
@@ -105,6 +107,23 @@ public class MainActivity extends AppCompatActivity {
         presCount = 0;
         EditText editText = findViewById(R.id.et_editText);
         LinearLayout linearLayout = findViewById(R.id.ll_layoutParent);
+
+        if(editText.getText().toString().equals(textAnswer)){
+            Toast.makeText(MainActivity.this, "Correct", Toast.LENGTH_SHORT).show();
+            Intent a = new Intent(MainActivity.this, Correct_Page.class);
+            startActivity(a);
+            editText.setText("");
+        }
+        else{
+            Toast.makeText(MainActivity.this, "Wrong", Toast.LENGTH_SHORT).show();
+            editText.setText("");
+        }
+
+        keys = shuffleArray(keys);
+        linearLayout.removeAllViews();
+        for (String key : keys){
+            addView(linearLayout, key,editText);
+        }
 
     }
 }
