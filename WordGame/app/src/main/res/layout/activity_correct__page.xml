@@ -18,11 +18,12 @@
         android:layout_gravity="center"
         android:textSize="22sp" />
     <ImageView
+        android:id="@+id/bigboss"
         android:src="@drawable/icboss"
         android:layout_gravity="center"
         android:layout_marginTop="35dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="180dp"
+        android:layout_height="180dp" />
 
     <TextView
         android:id="@+id/tv_textCorrectScreen"

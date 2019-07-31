@@ -7,6 +7,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private String[] keys={"R","I","B","D","X"};
     private String textAnswer = "BIRD";
     TextView tv_textScreen, tv_textQuestion, tv_textTitle;
+    Animation smallbigforth;
 
 
 
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        smallbigforth = AnimationUtils.loadAnimation(this, R.anim.smallbigforth);
 
         keys= shuffleArray(keys);
 
@@ -88,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                         editText.setText("");
 
                         editText.setText(editText.getText().toString()+text);
-                       // textView.setAnimation(bigsmallforth);
+                        textView.setAnimation(smallbigforth);
                         textView.animate().alpha(0).setDuration(300);
                         presCount++;
 
@@ -109,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearLayout = findViewById(R.id.ll_layoutParent);
 
         if(editText.getText().toString().equals(textAnswer)){
-            Toast.makeText(MainActivity.this, "Correct", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(MainActivity.this, "Correct", Toast.LENGTH_SHORT).show();
             Intent a = new Intent(MainActivity.this, Correct_Page.class);
             startActivity(a);
             editText.setText("");
