@@ -1,7 +1,7 @@
 package com.example.logoquiz.Common;
 
 public class Common {
-    public static char user_submit_answer;
+    public static char[] user_submit_answer;
     public static int count=1;
     public static String[] alphabet_character = {
             "a","b","c","d","e","f","g","h",
