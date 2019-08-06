@@ -13,12 +13,13 @@ import com.example.logoquiz.Adapter.gridViewSuggestAdapter;
 import com.example.logoquiz.Common.Common;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    public List suggestSource = new ArrayList();
+    public List<String> suggestSource = new ArrayList();
     public gridViewAnswerAdapter answerAdapter;
     public gridViewSuggestAdapter suggestAdapter;
 
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         gridViewAnswer = (GridView)findViewById(R.id.gridViewAnswer);
         gridViewSuggest = (GridView)findViewById(R.id.gridViewSuggest);
         imgViewQuestion = (ImageView)findViewById(R.id.imgLogo);
+
+        setupList();
         btnSummit = (Button)findViewById(R.id.btnSubmit);
 
         btnSummit.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 if (result.equals(correct_answer)){
-                    Toast.makeText(getApplicationContext(),"Finished! This is "+result,Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Finished! This is "+result,Toast.LENGTH_SHORT).show();
                     //Resetting
 
 
@@ -85,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
                     
                     setupList();
                 }
+                else{
+                    Toast.makeText(MainActivity.this,"Incorrect!!!",Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -96,10 +102,33 @@ public class MainActivity extends AppCompatActivity {
         imgViewQuestion.setImageResource(imageselected);
 
         correct_answer = getResources().getResourceName(imageselected);
-        correct_answer = correct_answer.substring(correct_answer.lastIndexOf("/"+1));
+        correct_answer = correct_answer.substring(correct_answer.lastIndexOf("/")+1);
 
         answer = correct_answer.toCharArray();
         Common.user_submit_answer = new char[answer.length];
+
+        //Adding character to list
+        suggestSource.clear();
+        for(char item:answer){
+            //Add logo name to list
+            suggestSource.add(String.valueOf(item));
+        }
+
+        //random add character to list
+        for (int i=answer.length;i<answer.length*2;i++){
+            suggestSource.add(Common.alphabet_character[random.nextInt(Common.alphabet_character.length)]);
+        }
+        //Sorting random
+        Collections.shuffle(suggestSource);
+        //Setting for Adapter
+        answerAdapter = new gridViewAnswerAdapter((char[]) setupNullList(),this);
+        suggestAdapter =  new gridViewSuggestAdapter(suggestSource,this,this);
+
+        answerAdapter.notifyDataSetChanged();
+        suggestAdapter.notifyDataSetChanged();
+
+        gridViewAnswer.setAdapter(answerAdapter);
+        gridViewSuggest.setAdapter(suggestAdapter);
     }
 
     private Object setupNullList() {

@@ -8,12 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 
+import com.example.logoquiz.Common.Common;
 import com.example.logoquiz.MainActivity;
 
+import java.util.Collections;
 import java.util.List;
 
 public class gridViewSuggestAdapter extends BaseAdapter {
-    private List suggestSource;
+    private List<String> suggestSource;
     private Context context;
     private MainActivity mainActivity;
 
@@ -39,7 +41,7 @@ public class gridViewSuggestAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         Button button;
         if(convertView == null){
             if (suggestSource.get(position).equals("null")){
@@ -59,7 +61,35 @@ public class gridViewSuggestAdapter extends BaseAdapter {
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //
+                        //if correct answer contains character user selects
+                        if (String.valueOf(mainActivity.answer).contains((CharSequence) suggestSource.get(position))){
+
+                            char compare = ((CharSequence) suggestSource.get(position)).charAt(0);
+
+                            for (int i=0;i<mainActivity.answer.length;i++){
+                                if(compare == mainActivity.answer[i]){
+                                    Common.user_submit_answer[i] = compare;
+                                }
+                            }
+                            // Updating UI
+                            gridViewAnswerAdapter answerAdapter = new gridViewAnswerAdapter(Common.user_submit_answer,context);
+                            mainActivity.gridViewAnswer.setAdapter(answerAdapter);
+                            answerAdapter.notifyDataSetChanged();
+
+                            //Remove from suggest source
+                            mainActivity.suggestSource.set(position,"null");
+                            mainActivity.suggestAdapter = new gridViewSuggestAdapter(mainActivity.suggestSource,context,mainActivity);
+                            mainActivity.gridViewSuggest.setAdapter(mainActivity.suggestAdapter);
+                            mainActivity.suggestAdapter.notifyDataSetChanged();
+
+                        }
+                        else{
+                            //Remove from suggest source
+                            mainActivity.suggestSource.set(position,"null");
+                            mainActivity.suggestAdapter = new gridViewSuggestAdapter(mainActivity.suggestSource,context,mainActivity);
+                            mainActivity.gridViewSuggest.setAdapter(mainActivity.suggestAdapter);
+                            mainActivity.suggestAdapter.notifyDataSetChanged();
+                        }
                     }
                 });
 
