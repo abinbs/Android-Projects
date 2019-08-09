@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="#45454a"
+    android:background="@drawable/bgapp"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
@@ -161,6 +161,7 @@
             />
 
     </LinearLayout>
+
 
 
 
