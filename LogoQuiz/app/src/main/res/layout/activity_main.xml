@@ -6,7 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bgapp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Predict the company!"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="#FFF"
+        android:layout_marginTop="18dp"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
@@ -49,10 +58,15 @@
 
     <Button
         android:id="@+id/btnSubmit"
-        android:text="Submit"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#3ba6c4"
+        android:text="Submit"
+        android:textColor="#FFF"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"/>
 
 
 
