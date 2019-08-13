@@ -2,8 +2,10 @@ package com.example.wordgame;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -14,6 +16,15 @@ public class Correct_Page extends AppCompatActivity {
     TextView tv_textCScreen, tv_textCorrectScreen, tv_textBtn,tv_textTitle1;
     ImageView bigboss;
     Animation smalltobig;
+
+    public void onBtnBackClick(View v){
+        if (v.getId() == R.id.tv_textBtn){
+            Intent i =new Intent(Correct_Page.this,MainActivity.class);
+            startActivity(i);
+        }
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
