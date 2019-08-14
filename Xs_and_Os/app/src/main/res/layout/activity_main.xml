@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:text="Player 1: 0"
             android:textSize="30sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            />
         <TextView
             android:id="@+id/tv_p2"
             android:layout_width="wrap_content"
@@ -35,7 +36,8 @@
             android:layout_centerVertical="true"
             android:layout_marginEnd="33dp"
             android:text="Reset"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            />
 
     </RelativeLayout>
     <LinearLayout
@@ -48,21 +50,28 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"
+            />
         <Button
             android:id="@+id/bt_01"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
         <Button
             android:id="@+id/bt_02"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
 
     </LinearLayout>
 
@@ -76,21 +85,27 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
         <Button
             android:id="@+id/bt_11"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
         <Button
             android:id="@+id/bt_12"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
 
     </LinearLayout>
 
@@ -104,21 +119,27 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
         <Button
             android:id="@+id/bt_21"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
         <Button
             android:id="@+id/bt_22"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:textSize="60sp"
-            android:freezesText="true"/>
+            android:freezesText="true"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="60dp"/>
 
     </LinearLayout>
 
