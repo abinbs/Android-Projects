@@ -19,4 +19,5 @@ All they have to do is to take a picture of the prescription and we would connec
 A simple Word Game for kids about naming the various animals.</br>
 <h3>5. Logo Quiz:</h3></br>
 An app to identify the various IT comapny logo's.</br>
-
+<h3>6. Xs and Os</h3></br>
+A typical Tic Tac Toe game for fun :)</br>
